@@ -36,7 +36,7 @@ const Dashboard = () => {
           <DashboardCard
             title="Your Total Balance"
             value="৳1000"
-            subtitle="Next bill due on Nov, 28th, 2022."
+            subtitle="Next bill due on: 13 days."
             button="Pay"
             image={money}
             path="/"
