@@ -1,11 +1,12 @@
 import { Avatar, Grid, Input } from '@arco-design/web-react'
 import { IconNotification, IconUser } from '@arco-design/web-react/icon'
-import AccountCard from './AccountCard'
-import ArticleCard from './ArticleCard'
-import { default as BalanceCard } from './BalanceCard'
+import money from '../../assets/money.png'
+import article from '../../assets/newspaper.png'
+import DashboardCard from './DashboardCard'
 const InputSearch = Input.Search
 const Row = Grid.Row
 const Col = Grid.Col
+import account from '../../assets/personal.png'
 
 const Dashboard = () => {
   return (
@@ -32,13 +33,35 @@ const Dashboard = () => {
 
       <Row gutter={40}>
         <Col xs={24} sm={24} md={12}>
-          <BalanceCard />
+          <DashboardCard
+            title="Your Total Balance"
+            value="৳1000"
+            subtitle="Next bill due on Nov, 28th, 2022."
+            button="Pay"
+            image={money}
+            path="/"
+          />
+      
         </Col>
         <Col xs={24} sm={24} md={12}>
-          <ArticleCard />
+          <DashboardCard
+            title="Total Number of Articles"
+            value="25"
+            subtitle="Remaining storage: 100"
+            button="Show Articles"
+            image={article}
+            path="/articles"
+          />
         </Col>
         <Col xs={24} sm={24} md={12}>
-          <AccountCard />
+          <DashboardCard
+            title="Total Number of User"
+            value="12"
+            subtitle="Remaining slots: 5"
+            button="Invite"
+            image={account}
+            path="/"
+          />
         </Col>
       </Row>
     </div>

@@ -27,13 +27,15 @@ export default function Home() {
               position: 'sticky',
               top: 0,
             }}
-            xs={5}
-            sm={4}
-            md={4}
+            xs={4}
+            sm={10}
+            md={10}
+            lg={6}
+            xl={4}
           >
             <SideBar currentTab={currentTab} setCurrentTab={setCurrentTab} />
           </Col>
-          <Col xs={19} sm={20} md={20}>
+          <Col xs={20} sm={14} md={14} lg={18} xl={20}>
             <MainBody currentTab={currentTab} setCurrentTab={setCurrentTab} />
           </Col>
         </Row>

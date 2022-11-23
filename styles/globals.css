@@ -38,6 +38,14 @@ a {
   display: none !important;
 }
 
+.responsive-sidebar-menu {
+  padding: 0 20px !important;
+}
+.responsive-sidebar-logo {
+  width: 70px;
+  height: 51px;
+}
+
 @media only screen and (max-width: 600px) {
   .responsive-desktop {
     display: none !important;
@@ -47,5 +55,13 @@ a {
   }
   .responsive-nav-icons {
     display: none;
+  }
+  .responsive-sidebar-menu {
+    padding: 0 6px !important;
+  }
+
+  .responsive-sidebar-logo {
+    width: 50px;
+    height: 31px;
   }
 }

@@ -14,6 +14,7 @@ const SideBarTab = ({ title, icon, currentTab, setCurrentTab }) => {
         width: '100%',
         padding: '0 20px',
       }}
+      className="responsive-sidebar-menu"
     >
       {icon}
 

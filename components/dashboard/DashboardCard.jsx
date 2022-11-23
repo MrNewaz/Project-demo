@@ -1,8 +1,9 @@
 import { Button, Card, Space, Typography } from '@arco-design/web-react'
 import Image from 'next/image'
-import money from '../../assets/money.png'
+import { useRouter } from 'next/router'
 
-const BalanceCard = () => {
+const DashboardCard = ({ title, value, subtitle, button, path, image }) => {
+  const router = useRouter()
   return (
     <Card hoverable style={{ margin: '2rem 0' }}>
       <Space
@@ -20,27 +21,28 @@ const BalanceCard = () => {
             flexDirection: 'column',
           }}
         >
-          <Typography.Title style={{ marginTop: 0 }} heading={3}>
-            Your Total Balance
+          <Typography.Title style={{ marginTop: 0 }} heading={4}>
+            {title}
           </Typography.Title>
           <Typography.Text style={{ fontSize: '1.4rem' }}>
-            ৳1000
+            {value}
           </Typography.Text>
           <Typography.Text disabled style={{ cursor: 'text' }}>
-            Next bill due on Nov, 28th, 2022.
+            {subtitle}
           </Typography.Text>
           <Button
+            onClick={() => router.push(path)}
             style={{ marginTop: '4rem', padding: '0 2rem' }}
             size="large"
             type="primary"
           >
-            Pay
+            {button}
           </Button>
         </Space>
         <Image
           className="responsive-desktop"
-          src={money}
-          alt="balance"
+          src={image}
+          alt={title}
           width={100}
           height={100}
         />
@@ -49,4 +51,4 @@ const BalanceCard = () => {
   )
 }
 
-export default BalanceCard
+export default DashboardCard

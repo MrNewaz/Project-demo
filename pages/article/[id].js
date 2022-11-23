@@ -1,7 +1,6 @@
-import { Typography } from '@arco-design/web-react'
+import { Card, Image, Typography } from '@arco-design/web-react'
 import '@arco-design/web-react/dist/css/arco.css'
 import { useRouter } from 'next/router'
-import OtherArticles from '../../components/articles/OtherArticles'
 import articles from '../../data/articles'
 
 const SingleArticle = () => {
@@ -19,20 +18,34 @@ const SingleArticle = () => {
           backgroundRepeat: 'no-repeat',
           backgroundAttachment: 'fixed',
           height: '100vh',
+          overflow: 'hidden',
         }}
       >
+        <Card
+          style={{
+            width: 'fit-content',
+            blockSize: 'fit-content',
+            margin: '2rem',
+          }}
+        >
+          <Image
+            width="100%"
+            src={filteredArticle?.image}
+            alt={filteredArticle?.title}
+          />
+        </Card>
+
         <Typography.Title
           style={{
             marginTop: 0,
             padding: '2rem',
             color: '#fafafa',
-            fontSize: '3rem',
           }}
         >
           {filteredArticle?.title}
         </Typography.Title>
         <Typography.Title
-          heading={4}
+          heading={6}
           style={{
             marginTop: 0,
             padding: '0 2rem',
@@ -42,7 +55,7 @@ const SingleArticle = () => {
           Created at: {filteredArticle?.date}
         </Typography.Title>
         <Typography.Title
-          heading={3}
+          heading={5}
           style={{
             marginTop: 0,
             padding: '0 2rem',
@@ -51,28 +64,6 @@ const SingleArticle = () => {
         >
           {filteredArticle?.description}
         </Typography.Title>
-        <br />
-        <Typography.Title
-          heading={3}
-          style={{
-            textAlign: 'center',
-            marginTop: 0,
-            padding: '0 2rem',
-            color: '#fafafa',
-          }}
-        >
-          Similar Articles
-        </Typography.Title>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-          }}
-        >
-          <OtherArticles />
-        </div>
       </div>
     </div>
   )

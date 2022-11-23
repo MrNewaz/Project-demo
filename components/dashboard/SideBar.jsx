@@ -19,7 +19,7 @@ const SideBar = ({ currentTab, setCurrentTab }) => {
           alignItems: 'center',
         }}
       >
-        <Image alt="logo" src={logo} width={70} height={51} />
+        <Image alt="logo" src={logo} className="responsive-sidebar-logo" />
       </div>
       <Divider />
       <SideBarTab
@@ -29,7 +29,7 @@ const SideBar = ({ currentTab, setCurrentTab }) => {
         icon={
           <IconApps
             style={{
-              margin: '1rem',
+              margin: '16px',
               fontSize: '30px',
               color: currentTab === 'DashBoard' ? '#165DFF' : '#181413',
               transition: 'all 0.5s ease-in-out',

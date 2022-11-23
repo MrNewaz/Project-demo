@@ -1,5 +1,7 @@
-import { Grid, Typography } from '@arco-design/web-react'
+import { Card, Divider, Grid, Typography } from '@arco-design/web-react'
 import '@arco-design/web-react/dist/css/arco.css'
+import { IconDoubleLeft } from '@arco-design/web-react/icon'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import ArticleCard from '../../components/articles/ArticleCard'
 import ArticlePagination from '../../components/articles/Pagination'
@@ -8,6 +10,7 @@ const Row = Grid.Row
 const Col = Grid.Col
 
 const Articles = () => {
+  const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1)
 
   const indexOfLastArticle = currentPage * 10
@@ -19,12 +22,26 @@ const Articles = () => {
 
   return (
     <div style={{ padding: '2rem' }}>
-      <Typography.Title
-        style={{ marginTop: 0, textDecoration: 'underline' }}
-        heading={2}
-      >
-        All Articles
-      </Typography.Title>
+      <Card style={{ margin: '0 0 2rem 0' }}>
+        <div
+          onClick={() => router.push('/')}
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            cursor: 'pointer',
+          }}
+        >
+          <IconDoubleLeft fontSize="30px" />
+          <Typography.Title style={{ margin: 0 }} heading={5}>
+            Go Back
+          </Typography.Title>
+        </div>
+        <Divider />
+        <Typography.Title style={{ margin: 0 }} heading={3}>
+          All Articles
+        </Typography.Title>
+      </Card>
       <Row gutter={40}>
         {currentArticles.map((article) => (
           <Col
