@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import ArticleCard from '../../components/articles/ArticleCard'
 import ArticlePagination from '../../components/articles/Pagination'
+import Header from '../../components/Header/Header'
 import articles from '../../data/articles'
 const Row = Grid.Row
 const Col = Grid.Col
@@ -21,42 +22,55 @@ const Articles = () => {
   )
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <Card style={{ margin: '0 0 2rem 0' }}>
-        <div
-          onClick={() => router.push('/')}
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            cursor: 'pointer',
-          }}
-        >
-          <IconDoubleLeft fontSize="30px" />
-          <Typography.Title style={{ margin: 0 }} heading={5}>
-            Go Back
-          </Typography.Title>
-        </div>
-        <Divider />
-        <Typography.Title style={{ margin: 0 }} heading={3}>
-          All Articles
-        </Typography.Title>
-      </Card>
-      <Row gutter={40}>
-        {currentArticles.map((article) => (
-          <Col
-            xs={24}
-            sm={12}
-            md={8}
-            key={article.id}
-            style={{ marginBottom: '2rem' }}
+    <>
+      <Header />
+      <div style={{ padding: '2rem' }}>
+        <Card style={{ margin: '0 0 2rem 0' }}>
+          <div
+            onClick={() => router.push('/')}
+            style={{
+              display: 'flex',
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
           >
-            <ArticleCard article={article} />
-          </Col>
-        ))}
-      </Row>
-      <ArticlePagination articles={articles} setCurrentPage={setCurrentPage} />
-    </div>
+            <IconDoubleLeft fontSize="30px" />
+            <Typography.Title style={{ margin: 0, color: '#' }} heading={5}>
+              Go Back
+            </Typography.Title>
+          </div>
+          <Divider />
+          <Typography.Title
+            style={{
+              margin: 0,
+              textAlign: 'center',
+              textDecoration: 'underline',
+            }}
+            heading={3}
+          >
+            All Articles
+          </Typography.Title>
+        </Card>
+        <Row gutter={40}>
+          {currentArticles.map((article) => (
+            <Col
+              xs={24}
+              sm={12}
+              md={8}
+              key={article.id}
+              style={{ marginBottom: '2rem' }}
+            >
+              <ArticleCard article={article} />
+            </Col>
+          ))}
+        </Row>
+        <ArticlePagination
+          articles={articles}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
+    </>
   )
 }
 

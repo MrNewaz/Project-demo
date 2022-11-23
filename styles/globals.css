@@ -46,6 +46,13 @@ a {
   height: 51px;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 600px) {
   .responsive-desktop {
     display: none !important;

@@ -2,11 +2,11 @@ import { Avatar, Grid, Input } from '@arco-design/web-react'
 import { IconNotification, IconUser } from '@arco-design/web-react/icon'
 import money from '../../assets/money.png'
 import article from '../../assets/newspaper.png'
+import account from '../../assets/personal.png'
 import DashboardCard from './DashboardCard'
 const InputSearch = Input.Search
 const Row = Grid.Row
 const Col = Grid.Col
-import account from '../../assets/personal.png'
 
 const Dashboard = () => {
   return (
@@ -41,7 +41,6 @@ const Dashboard = () => {
             image={money}
             path="/"
           />
-      
         </Col>
         <Col xs={24} sm={24} md={12}>
           <DashboardCard
