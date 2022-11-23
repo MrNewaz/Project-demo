@@ -14,7 +14,7 @@
 
 ## Live Preview
 
-* [Website](https://project-demo-mxpxzb827-mrnewaz.vercel.app/)
+* [Website](https://project-demo-red.vercel.app/)
 
 ## Screenshots
 
