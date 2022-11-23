@@ -12,7 +12,9 @@
 * A page with list of articles which contains pagination functionality.
 * A page with single article and its description.
 
-## Live Preview: [Live Preview](https://project-demo-mxpxzb827-mrnewaz.vercel.app/)
+## Live Preview
+
+* [Website](https://project-demo-mxpxzb827-mrnewaz.vercel.app/)
 
 ## Screenshots
 
