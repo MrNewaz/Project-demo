@@ -10,7 +10,7 @@ const SideBarTab = ({ title, icon, currentTab, setCurrentTab }) => {
         alignItems: 'center',
         cursor: 'pointer',
         backgroundColor: currentTab === title ? '#f6f6f6' : '#ffffff',
-        transition: 'all 0.5s ease-in-out',
+        transition: 'all 0.3s ease-in-out',
         width: '100%',
         padding: '0 20px',
       }}
@@ -20,13 +20,13 @@ const SideBarTab = ({ title, icon, currentTab, setCurrentTab }) => {
 
       <Typography.Title
         style={{
-          margin: '1rem',
+          margin: '0.2rem',
           color: currentTab === title ? '#165DFF' : '#181413',
           transition: 'all 0.5s ease-in-out',
         }}
         className="responsive-desktop"
         bold
-        heading={4}
+        heading={6}
       >
         {title}
       </Typography.Title>

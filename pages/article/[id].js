@@ -88,6 +88,7 @@ const SingleArticle = () => {
             }}
           >
             <IconDoubleLeft fontSize="20px" />
+
             <Typography.Title style={{ margin: 0 }} heading={6}>
               Go Back
             </Typography.Title>

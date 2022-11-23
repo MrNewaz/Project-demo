@@ -1,4 +1,4 @@
-import { Card, Divider, Grid, Typography } from '@arco-design/web-react'
+import { Button, Card, Divider, Grid, Typography } from '@arco-design/web-react'
 import '@arco-design/web-react/dist/css/arco.css'
 import { IconDoubleLeft } from '@arco-design/web-react/icon'
 import { useRouter } from 'next/router'
@@ -35,10 +35,14 @@ const Articles = () => {
               cursor: 'pointer',
             }}
           >
-            <IconDoubleLeft fontSize="30px" />
-            <Typography.Title style={{ margin: 0, color: '#' }} heading={5}>
+            <Button
+              type="primary"
+              icon={<IconDoubleLeft />}
+              shape="round"
+              style={{ padding: '0 8px' }}
+            >
               Go Back
-            </Typography.Title>
+            </Button>
           </div>
           <Divider />
           <Typography.Title

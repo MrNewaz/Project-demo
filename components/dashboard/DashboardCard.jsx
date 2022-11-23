@@ -1,4 +1,4 @@
-import { Button, Card, Space, Typography } from '@arco-design/web-react'
+import { Button, Card, Space, Tag, Typography } from '@arco-design/web-react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
@@ -24,15 +24,27 @@ const DashboardCard = ({ title, value, subtitle, button, path, image }) => {
           <Typography.Title style={{ marginTop: 0 }} heading={4}>
             {title}
           </Typography.Title>
-          <Typography.Text style={{ fontSize: '1.4rem' }}>
+          <Tag
+            size="large"
+            color="arcoblue"
+            style={{ padding: '0 2rem', margin: '1rem 0' }}
+          >
             {value}
-          </Typography.Text>
-          <Typography.Text disabled style={{ cursor: 'text' }}>
+          </Tag>
+          <Tag
+            size="small"
+            color="red"
+            style={{ padding: '0 2rem', margin: '1rem 0' }}
+          >
             {subtitle}
-          </Typography.Text>
+          </Tag>
+
+          {/* <Typography.Text disabled style={{ cursor: 'text' }}>
+          
+          </Typography.Text> */}
           <Button
             onClick={() => router.push(path)}
-            style={{ marginTop: '4rem', padding: '0 2rem' }}
+            style={{ marginTop: '2rem', padding: '0 2rem' }}
             size="large"
             type="primary"
           >
