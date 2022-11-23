@@ -20,7 +20,32 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: #181413;
+    background: #f6f6f6;
+  }
+}
+
+.responsive-nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.responsive-desktop {
+  display: block !important;
+}
+
+.responsive-mobile {
+  display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-desktop {
+    display: none !important;
+  }
+  .responsive-mobile {
+    display: block !important;
+  }
+  .responsive-nav-icons {
+    display: none;
   }
 }
