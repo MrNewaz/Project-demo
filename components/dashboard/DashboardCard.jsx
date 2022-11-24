@@ -31,17 +31,10 @@ const DashboardCard = ({ title, value, subtitle, button, path, image }) => {
           >
             {value}
           </Tag>
-          <Tag
-            size="small"
-            color="red"
-            style={{ padding: '0 2rem', margin: '1rem 0' }}
-          >
+          <Tag size="small" color="red">
             {subtitle}
           </Tag>
 
-          {/* <Typography.Text disabled style={{ cursor: 'text' }}>
-          
-          </Typography.Text> */}
           <Button
             onClick={() => router.push(path)}
             style={{ marginTop: '2rem', padding: '0 2rem' }}
