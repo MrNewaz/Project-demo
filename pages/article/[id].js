@@ -65,7 +65,7 @@ const SingleArticle = () => {
               padding: '0 2rem',
               color: '#fafafa',
             }}
-            className="line-clamp"
+            className="line-clamp-3"
           >
             {filteredArticle?.description}
           </Typography.Title>

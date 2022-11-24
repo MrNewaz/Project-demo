@@ -8,7 +8,7 @@ const ArticleCard = ({ article }) => {
     <Card
       hoverable
       cover={
-        <div style={{ height: 250, overflow: 'hidden' }}>
+        <div style={{ height: 200, overflow: 'hidden' }}>
           <Image
             style={{ width: '100%', transform: 'translateY(-20px)' }}
             alt={article.title}
@@ -27,7 +27,9 @@ const ArticleCard = ({ article }) => {
         }
         description={
           <div>
-            <Typography.Text>{article.description}</Typography.Text>
+            <Typography.Text className="line-clamp-2">
+              {article.description}
+            </Typography.Text>
             <br />
             <br />
             <div
